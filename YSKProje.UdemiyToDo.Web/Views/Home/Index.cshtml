@@ -1,0 +1,24 @@
+﻿@model IEnumerable<  YSKProje.UdemiyToDo.Web.Models.MusteriViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @ViewBag.Isim <br />
+    @TempData["Isim"] <br />
+    @ViewData["Isim"] <br />
+    <p>Home İndex saufası</p>
+    <besir gelen-data="ne haber"></besir>
+
+    @await Component.InvokeAsync("Urunler")
+
+    @await Component.InvokeAsync("Yeniiewcomponent")
+</body>
+</html>

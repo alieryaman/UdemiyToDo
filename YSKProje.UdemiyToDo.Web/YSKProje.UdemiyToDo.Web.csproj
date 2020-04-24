@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CYSKProje.UdemiyToDo.Entities\CYSKProje.UdemiyToDo.Entities.csproj" />
+    <ProjectReference Include="..\YSKProje.UdemiyToDo.DataAccsess\YSKProje.UdemiyToDo.DataAccsess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Kullanici\Data\" />
+    <Folder Include="Areas\Kullanici\Models\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>
