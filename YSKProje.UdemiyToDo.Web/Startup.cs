@@ -17,6 +17,7 @@ namespace YSKProje.UdemiyToDo.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
             services.AddControllersWithViews();
         }
 
@@ -25,13 +26,23 @@ namespace YSKProje.UdemiyToDo.Web
         {
             if (env.IsDevelopment())
             {
+               
                 app.UseDeveloperExceptionPage();
             }
-
+            else
+            {
+                app.UseExceptionHandler("/Home/Erorr");
+            }
+            app.UseExceptionHandler("/Home/Erorr");
+            app.UseSession();
+           
+            app.UseStatusCodePagesWithReExecute("/Home/Erorr");
             app.UseRouting();
             app.UseStaticFiles();
             
             app.useRouting();
+
+           
         }
     }
 }
